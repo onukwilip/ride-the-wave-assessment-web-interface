@@ -1,0 +1,41 @@
+$pry-color-50: #fbf6f5;
+$pry-color-100: #f6ecea;
+$pry-color-200: #f0dcd8;
+$pry-color-300: #e4c3bd;
+$pry-color-400: #d3a096;
+$pry-color-500: #ba7264;
+$pry-color-600: #aa6558;
+$pry-color-700: #8e5347;
+$pry-color-800: #77463d;
+$pry-color-900: #643f38;
+$pry-color-950: #351e1a;
+
+@mixin grid($col, $row, $gap) {
+    display: grid;
+    grid-template-columns: $col;
+    grid-auto-rows: $row;
+    gap: $gap;
+}
+
+@mixin flex($ai, $jc, $gap, $fld: false) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+    gap: $gap;
+
+    @if ($fld != false) {
+        flex-direction: $fld;
+    }
+}
+
+@mixin media($prefix, $size) {
+    @media (#{$prefix}-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-h($prefix, $size) {
+    @media (#{$prefix}-height: $size) {
+        @content;
+    }
+}

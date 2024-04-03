@@ -1,0 +1,12 @@
+@import "./config.scss";
+
+.form {
+    width: fit-content;
+    @include flex(center, center, 1rem, column);
+    .input {
+        width: 700px;
+    }
+    .actions {
+        width: 100%;
+    }
+}

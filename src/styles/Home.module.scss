@@ -1,0 +1,8 @@
+@import "./config.scss";
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    @include flex(center, start, 3rem, column);
+}

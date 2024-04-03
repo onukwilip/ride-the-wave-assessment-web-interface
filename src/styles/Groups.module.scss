@@ -1,0 +1,33 @@
+@import "./config.scss";
+.groups_component {
+    width: 700px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: $pry-color-400;
+    @include flex(center, start, 2rem, column);
+    .groups_container {
+        @include flex(center, start, 1rem, column);
+    }
+    .places_container {
+        @include flex(center, start, 1rem, column);
+    }
+}
+
+.each_place,
+.each_group {
+    width: 100%;
+    @include flex(start, start, 0.5rem, row);
+    .content {
+        flex: 1;
+        @include flex(start, start, 0.5rem, column);
+    }
+    .img_container {
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
